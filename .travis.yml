@@ -46,7 +46,7 @@ script:
   - make install.deps
   - mkdir -p /home/travis/gopath/src/github.com/containerd/
   - ls /home/travis/gopath/src/github.com/
-  - mv /home/travis/gopath/src/github.com/*/cri /home/travis/gopath/src/github.com/containerd
+  - mv /home/travis/gopath/src/github.com/cnnaik/cri /home/travis/gopath/src/github.com/containerd
   - make containerd
   - sudo PATH=$PATH GOPATH=$GOPATH make install-containerd
   - if [ "$HOSTTYPE" == "s390x" ];then
