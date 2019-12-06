@@ -22,7 +22,7 @@ ifeq ($(GOOS),windows)
 	ONI = "-"
 endif
 EPOCH_TEST_COMMIT := f9e02affccd51702191e5312665a16045ffef8ab
-PROJECT := github.com/cnnaik/cri
+PROJECT := github.com/containerd/cri
 BINDIR := ${DESTDIR}/usr/local/bin
 BUILD_DIR := _output
 # VERSION is derived from the current commit for HEAD. Version is used
@@ -89,7 +89,7 @@ $(BUILD_DIR)/$(CONTAINERD_BIN): $(SOURCES) $(PLUGIN_SOURCES)
 		-tags '$(BUILD_TAGS)' \
 		-ldflags '$(GO_LDFLAGS)' \
 		-gcflags '$(GO_GCFLAGS)' \
-		$(PROJECT)/cmd/containerd
+		github.com/cnnaik/cri/cmd/containerd
 
 test: ## unit test
 	@echo "$(WHALE) $@"
