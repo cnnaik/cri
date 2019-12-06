@@ -89,7 +89,7 @@ $(BUILD_DIR)/$(CONTAINERD_BIN): $(SOURCES) $(PLUGIN_SOURCES)
 		-tags '$(BUILD_TAGS)' \
 		-ldflags '$(GO_LDFLAGS)' \
 		-gcflags '$(GO_GCFLAGS)' \
-		github.com/cnnaik/cri/cmd/containerd
+		$(PROJECT)/cmd/containerd
 
 test: ## unit test
 	@echo "$(WHALE) $@"
