@@ -8,6 +8,10 @@ go:
 
 
 matrix:
+  allow_failures:
+    - go: tip
+    - go: tip
+      arch: s390x
   include:
   - os: linux	
     arch: s390x
