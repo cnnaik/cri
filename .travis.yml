@@ -49,10 +49,9 @@ script:
   - mv /home/travis/gopath/src/github.com/cnnaik/cri /home/travis/gopath/src/github.com/containerd
   - make containerd
   - sudo PATH=$PATH GOPATH=$GOPATH make install-containerd
-    make test
-    make test-integration
-    make test-cri
-   
+  - make test
+  - make test-integration
+  - make test-cri
 after_script:
   # Abuse travis to preserve the log.
   - cat /tmp/test-integration/containerd.log
