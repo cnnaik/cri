@@ -32,6 +32,8 @@ before_install:
   - sudo sysctl net.ipv6.conf.all.disable_ipv6=0
   - if [ "$HOSTTYPE" == "s390x" ]; then 
       curl -fsSL https://get.docker.com | bash; 
+    fi
+  - if [ "$HOSTTYPE" == "s390x" ]; then 
       sudo service docker start; 
     fi
 
