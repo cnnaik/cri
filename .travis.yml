@@ -42,6 +42,7 @@ before_script:
 
 script:
   - docker info
+  - service docker start
   - make .install.gitvalidation
   - make .gitvalidation
   - make install.deps
