@@ -30,7 +30,7 @@ before_install:
   - sudo apt-get update
   # Enable ipv6 for dualstack integration test.
   - sudo sysctl net.ipv6.conf.all.disable_ipv6=0
-  - ./contrib/ci.sh
+  - sudo ./contrib/ci.sh
 
 install:
   - sudo apt-get install btrfs-tools
