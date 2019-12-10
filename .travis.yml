@@ -36,13 +36,12 @@ install:
   - sudo apt-get install libseccomp2
   - sudo apt-get install libseccomp-dev
   - sudo apt-get install socat
-  - if [ "$HOSTTYPE" == "s390x" ]; then curl -fsSL https://get.docker.com | bash; fi  
 
 before_script:
   - export PATH=$HOME/gopath/bin:$PATH
 
 script:
-  - service docker status
+  - docker info
   - make .install.gitvalidation
   - make .gitvalidation
   - make install.deps
