@@ -41,6 +41,7 @@ before_script:
   - export PATH=$HOME/gopath/bin:$PATH
 
 script:
+  - service docker status
   - make .install.gitvalidation
   - make .gitvalidation
   - make install.deps
